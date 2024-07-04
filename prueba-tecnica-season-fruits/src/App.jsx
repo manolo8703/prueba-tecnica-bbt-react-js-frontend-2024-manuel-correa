@@ -1,14 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import home from "./components/home"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Inicio from './components/Inicio'
+
 
 function App() {
 
   return (
     <>
-      <div className="App">
+      <div className="container">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<home></home>}></Route>
+            <Route path="/" element={<Inicio></Inicio>}></Route>
           </Routes>
         </BrowserRouter>
       </div>
