@@ -1,10 +1,14 @@
 import axios from "axios";
 
-const getAllProducts = async () =>{
-    const urlallProducts = '/api/fruit/all'
+
+const urlallProducts = '/api/fruit/all'
+
+
+const getAllProducts = async (state) =>{
     const getProducts = await axios.get(urlallProducts)
-    console.log(getProducts)
+    state(getProducts.data)
 }
+
 
 export{
     getAllProducts
