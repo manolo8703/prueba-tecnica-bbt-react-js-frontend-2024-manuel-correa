@@ -1,12 +1,14 @@
 import axios from "axios";
 
-const getAllProducts = async () =>{
-    //const getProducts = await axios.get('https://rickandmortyapi.com/api/character')
-    const getProducts = await axios.get('https://www.fruityvice.com//api/fruit/all')
 
-    console.log(getProducts)
-    
+const urlallProducts = '/api/fruit/all'
+
+
+const getAllProducts = async (state) =>{
+    const getProducts = await axios.get(urlallProducts)
+    state(getProducts.data)
 }
+
 
 export{
     getAllProducts
